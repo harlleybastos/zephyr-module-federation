@@ -1,0 +1,14 @@
+{
+  "name": "zephyr-mf-demo",
+  "private": true,
+  "packageManager": "pnpm@10.6.2",
+  "scripts": {
+    "build": "pnpm --filter zephyr-mf-remote build && pnpm --filter zephyr-mf-host build",
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "check": "node scripts/check-build.mjs",
+    "typecheck": "pnpm -r exec tsc -p ."
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}
