@@ -3,3 +3,5 @@ dist/
 @mf-types/
 .mf/
 *.log
+test-results/
+playwright-report/

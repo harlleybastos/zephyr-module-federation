@@ -13,6 +13,8 @@ export default defineConfig({
       // local URL for dev; on deploy Zephyr swaps it for the remote's deployed
       // version, resolved from "zephyr:dependencies" in package.json
       remotes: { remote: 'remote@http://localhost:3001/mf-manifest.json' },
+      // version-first (default) fetches every remote at startup, so one dead remote blanks the host
+      shareStrategy: 'loaded-first',
       dts: false,
       shared: {
         react: { singleton: true },

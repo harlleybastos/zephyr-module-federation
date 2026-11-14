@@ -1,6 +1,9 @@
 import { lazy, Suspense } from 'react';
 
-const RemoteCounter = lazy(() => import('remote/Counter'));
+// a failed remote fetch must not unmount the whole host
+const RemoteCounter = lazy(() =>
+  import('remote/Counter').catch(() => ({ default: () => <p role="alert">Remote unavailable. Reload to retry.</p> })),
+);
 
 export default function App() {
   return (
