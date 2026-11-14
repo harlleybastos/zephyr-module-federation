@@ -1,6 +1,7 @@
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
+import { withZephyr } from 'zephyr-rsbuild-plugin';
 
 export default defineConfig({
   server: { port: 3001 },
@@ -19,5 +20,6 @@ export default defineConfig({
         'react-dom': { singleton: true },
       },
     }),
+    withZephyr(),
   ],
 });
