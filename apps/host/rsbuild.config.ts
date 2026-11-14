@@ -10,6 +10,8 @@ export default defineConfig({
     pluginReact(),
     pluginModuleFederation({
       name: 'host',
+      // local URL for dev; on deploy Zephyr swaps it for the remote's deployed
+      // version, resolved from "zephyr:dependencies" in package.json
       remotes: { remote: 'remote@http://localhost:3001/mf-manifest.json' },
       dts: false,
       shared: {

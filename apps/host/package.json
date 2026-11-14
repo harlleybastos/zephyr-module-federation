@@ -20,5 +20,8 @@
     "@types/react-dom": "19.3.0",
     "typescript": "6.0.3",
     "zephyr-rsbuild-plugin": "1.8.0"
+  },
+  "zephyr:dependencies": {
+    "remote": "zephyr-mf-remote@*"
   }
 }
